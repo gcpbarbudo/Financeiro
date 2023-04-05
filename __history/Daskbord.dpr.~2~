@@ -1,0 +1,14 @@
+program Daskbord;
+
+uses
+  Vcl.Forms,
+  CaraRico in 'CaraRico.pas' {frmDashbord};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmDashbord, frmDashbord);
+  Application.Run;
+end.
