@@ -12,9 +12,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(Tdm, dm);
-  Application.CreateForm(TCrudBase, CrudBase);
-  Application.CreateForm(TfrmRelatorio, frmRelatorio);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.Run;
 end.

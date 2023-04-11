@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.StdCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage;
+  Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage, Vcl.Buttons, System.Actions,
+  Vcl.ActnList;
 
 type
   TfrmPrincipal = class(TForm)
@@ -29,7 +30,6 @@ type
     gbxUltLancamentos: TGroupBox;
     dbgUltLanc: TDBGrid;
     Image1: TImage;
-    Button1: TButton;
     Label2: TLabel;
     lblVCompras: TLabel;
     lblVMoradia: TLabel;
@@ -37,6 +37,10 @@ type
     Label5: TLabel;
     GroupBox1: TGroupBox;
     DBGrid1: TDBGrid;
+    acAcoes: TActionList;
+    acInserir: TAction;
+    SpeedButton1: TSpeedButton;
+    procedure acInserirExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,5 +53,12 @@ var
 implementation
 
 {$R *.dfm}
+
+uses udm, ufrmRelatorio;
+
+procedure TfrmPrincipal.acInserirExecute(Sender: TObject);
+begin
+  showmessage('inserir');
+end;
 
 end.

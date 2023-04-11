@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
-  JvExMask, JvToolEdit, JvDBControls, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
 
 type
   TfrmRelatorio = class(TForm)
@@ -16,8 +16,6 @@ type
     pnlCartoes: TPanel;
     pnlCarteira: TPanel;
     btnPesquisar: TButton;
-    jdeDtFinal: TJvDBDateEdit;
-    jdeDtInicio: TJvDBDateEdit;
   private
     { Private declarations }
   public

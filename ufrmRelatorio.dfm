@@ -55,22 +55,6 @@ object frmRelatorio: TfrmRelatorio
       Caption = 'btnPesquisar'
       TabOrder = 0
     end
-    object jdeDtFinal: TJvDBDateEdit
-      Left = 263
-      Top = 47
-      Width = 121
-      Height = 21
-      ShowNullDate = False
-      TabOrder = 1
-    end
-    object jdeDtInicio: TJvDBDateEdit
-      Left = 136
-      Top = 47
-      Width = 121
-      Height = 21
-      ShowNullDate = False
-      TabOrder = 2
-    end
   end
   object pnlEsquerdo: TPanel
     Left = 0
@@ -83,9 +67,6 @@ object frmRelatorio: TfrmRelatorio
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitTop = -305
-    ExplicitWidth = 602
-    ExplicitHeight = 604
     object dbgUltLanc: TDBGrid
       AlignWithMargins = True
       Left = 11
@@ -114,8 +95,6 @@ object frmRelatorio: TfrmRelatorio
       BevelEdges = []
       ShowCaption = False
       TabOrder = 1
-      ExplicitTop = 528
-      ExplicitWidth = 594
       object pnlCarteira: TPanel
         AlignWithMargins = True
         Left = 380
@@ -133,7 +112,6 @@ object frmRelatorio: TfrmRelatorio
         ParentBackground = False
         ShowCaption = False
         TabOrder = 0
-        ExplicitLeft = 456
       end
     end
   end
