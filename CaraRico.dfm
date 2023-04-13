@@ -26,7 +26,6 @@ object frmPrincipal: TfrmPrincipal
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitWidth = 1119
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
@@ -69,7 +68,6 @@ object frmPrincipal: TfrmPrincipal
     ParentFont = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 897
     object pnlRestante: TPanel
       AlignWithMargins = True
       Left = 11
@@ -87,7 +85,6 @@ object frmPrincipal: TfrmPrincipal
       ParentBackground = False
       ShowCaption = False
       TabOrder = 0
-      ExplicitTop = 11
       object lblRestante: TLabel
         AlignWithMargins = True
         Left = 10
@@ -107,8 +104,6 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        ExplicitLeft = 11
-        ExplicitTop = 80
         ExplicitWidth = 52
       end
       object Label5: TLabel
@@ -130,8 +125,6 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 11
-        ExplicitTop = 11
         ExplicitWidth = 97
       end
     end
@@ -148,7 +141,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alTop
       Caption = 'Categoria'
       TabOrder = 1
-      ExplicitTop = 502
       object dbgPagos: TDBGrid
         AlignWithMargins = True
         Left = 12
@@ -187,7 +179,6 @@ object frmPrincipal: TfrmPrincipal
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
-      ExplicitTop = 128
       object dbgPendente: TDBGrid
         AlignWithMargins = True
         Left = 12
@@ -220,7 +211,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alTop
       Caption = 'Pagos'
       TabOrder = 3
-      ExplicitTop = 315
       object DBGrid1: TDBGrid
         AlignWithMargins = True
         Left = 12
@@ -254,8 +244,6 @@ object frmPrincipal: TfrmPrincipal
     ParentBackground = False
     ShowCaption = False
     TabOrder = 2
-    ExplicitLeft = 1
-    ExplicitTop = 43
     object Image1: TImage
       AlignWithMargins = True
       Left = 10
@@ -489,8 +477,6 @@ object frmPrincipal: TfrmPrincipal
     ParentBackground = False
     ShowCaption = False
     TabOrder = 3
-    ExplicitLeft = 163
-    ExplicitWidth = 734
     object pnlCartoes: TPanel
       AlignWithMargins = True
       Left = 4
@@ -502,7 +488,6 @@ object frmPrincipal: TfrmPrincipal
       BevelOuter = bvNone
       ShowCaption = False
       TabOrder = 0
-      ExplicitWidth = 726
       object pnlCarteira: TPanel
         AlignWithMargins = True
         Left = 430
@@ -520,8 +505,6 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 0
-        ExplicitLeft = 447
-        ExplicitTop = 42
         object Label4: TLabel
           AlignWithMargins = True
           Left = 10
@@ -541,8 +524,6 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 11
-          ExplicitTop = 76
           ExplicitWidth = 45
         end
         object lblVCarteira: TLabel
@@ -564,8 +545,6 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = 11
-          ExplicitTop = 11
           ExplicitWidth = 89
         end
       end
@@ -585,8 +564,6 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 1
-        ExplicitLeft = 236
-        ExplicitTop = 42
         object Label3: TLabel
           AlignWithMargins = True
           Left = 11
@@ -606,7 +583,6 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = []
           ParentFont = False
-          ExplicitTop = 76
           ExplicitWidth = 46
         end
         object lblVMoradia: TLabel
@@ -628,7 +604,7 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = 67
+          ExplicitWidth = 90
         end
       end
       object pnlCompras: TPanel
@@ -648,8 +624,6 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 2
-        ExplicitLeft = 11
-        ExplicitTop = 9
         object Label2: TLabel
           AlignWithMargins = True
           Left = 10
@@ -669,8 +643,6 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = []
           ParentFont = False
-          ExplicitLeft = 11
-          ExplicitTop = 76
           ExplicitWidth = 52
         end
         object lblVCompras: TLabel
@@ -692,8 +664,6 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = 11
-          ExplicitTop = 11
           ExplicitWidth = 99
         end
       end
@@ -711,7 +681,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       Caption = 'Ultimos Lan'#231'amentos'
       TabOrder = 1
-      ExplicitWidth = 712
       object dbgUltLanc: TDBGrid
         AlignWithMargins = True
         Left = 12
@@ -737,6 +706,7 @@ object frmPrincipal: TfrmPrincipal
     Left = 248
     Top = 248
     object acInserir: TAction
+      Category = 'Dashbord'
       Caption = 'Inserir'
       ImageIndex = 0
       OnExecute = acInserirExecute

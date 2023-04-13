@@ -58,7 +58,7 @@ uses udm, ufrmRelatorio;
 
 procedure TfrmPrincipal.acInserirExecute(Sender: TObject);
 begin
-  showmessage('inserir');
+  showmessage('Ado a ado, se está lendo isso é proletariado');
 end;
 
 end.
