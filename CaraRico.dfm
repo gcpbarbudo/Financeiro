@@ -58,6 +58,7 @@ object frmPrincipal: TfrmPrincipal
     Height = 701
     Align = alRight
     BevelEdges = []
+    BevelOuter = bvNone
     Color = 16511473
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -70,9 +71,9 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
     object pnlRestante: TPanel
       AlignWithMargins = True
-      Left = 11
-      Top = 13
-      Width = 200
+      Left = 10
+      Top = 12
+      Width = 202
       Height = 107
       Margins.Left = 10
       Margins.Top = 12
@@ -89,7 +90,7 @@ object frmPrincipal: TfrmPrincipal
         AlignWithMargins = True
         Left = 10
         Top = 81
-        Width = 180
+        Width = 182
         Height = 16
         Margins.Left = 10
         Margins.Top = 10
@@ -110,7 +111,7 @@ object frmPrincipal: TfrmPrincipal
         AlignWithMargins = True
         Left = 10
         Top = 10
-        Width = 180
+        Width = 182
         Height = 19
         Margins.Left = 10
         Margins.Top = 10
@@ -130,9 +131,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object gbxPagos: TGroupBox
       AlignWithMargins = True
-      Left = 11
-      Top = 504
-      Width = 200
+      Left = 10
+      Top = 503
+      Width = 202
       Height = 177
       Margins.Left = 10
       Margins.Top = 0
@@ -145,7 +146,7 @@ object frmPrincipal: TfrmPrincipal
         AlignWithMargins = True
         Left = 12
         Top = 25
-        Width = 176
+        Width = 178
         Height = 140
         Margins.Left = 10
         Margins.Top = 10
@@ -162,9 +163,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object gbxPendente: TGroupBox
       AlignWithMargins = True
-      Left = 11
-      Top = 130
-      Width = 200
+      Left = 10
+      Top = 129
+      Width = 202
       Height = 177
       Margins.Left = 10
       Margins.Top = 0
@@ -183,7 +184,7 @@ object frmPrincipal: TfrmPrincipal
         AlignWithMargins = True
         Left = 12
         Top = 25
-        Width = 176
+        Width = 178
         Height = 140
         Margins.Left = 10
         Margins.Top = 10
@@ -200,9 +201,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object GroupBox1: TGroupBox
       AlignWithMargins = True
-      Left = 11
-      Top = 317
-      Width = 200
+      Left = 10
+      Top = 316
+      Width = 202
       Height = 177
       Margins.Left = 10
       Margins.Top = 0
@@ -215,7 +216,7 @@ object frmPrincipal: TfrmPrincipal
         AlignWithMargins = True
         Left = 12
         Top = 25
-        Width = 176
+        Width = 178
         Height = 140
         Margins.Left = 10
         Margins.Top = 10
@@ -455,10 +456,36 @@ object frmPrincipal: TfrmPrincipal
     object SpeedButton1: TSpeedButton
       AlignWithMargins = True
       Left = 3
+      Top = 263
+      Width = 124
+      Height = 60
+      Action = acCategoria
+      Align = alTop
+      Images = dm.imgIcones32
+      ExplicitLeft = 0
+      ExplicitTop = 128
+      ExplicitWidth = 130
+    end
+    object SpeedButton2: TSpeedButton
+      AlignWithMargins = True
+      Left = 3
       Top = 131
       Width = 124
       Height = 60
       Action = acInserir
+      Align = alTop
+      Images = dm.imgIcones32
+      ExplicitLeft = 0
+      ExplicitTop = 128
+      ExplicitWidth = 130
+    end
+    object SpeedButton3: TSpeedButton
+      AlignWithMargins = True
+      Left = 3
+      Top = 197
+      Width = 124
+      Height = 60
+      Action = acGRecorrente
       Align = alTop
       Images = dm.imgIcones32
       ExplicitLeft = 0
@@ -703,13 +730,23 @@ object frmPrincipal: TfrmPrincipal
   end
   object acAcoes: TActionList
     Images = dm.imgIcones32
-    Left = 248
-    Top = 248
+    Left = 24
+    Top = 392
     object acInserir: TAction
       Category = 'Dashbord'
       Caption = 'Inserir'
       ImageIndex = 0
       OnExecute = acInserirExecute
+    end
+    object acGRecorrente: TAction
+      Category = 'Dashbord'
+      Caption = 'Gasto Recorrente'
+      OnExecute = acGRecorrenteExecute
+    end
+    object acCategoria: TAction
+      Category = 'Dashbord'
+      Caption = 'Categoria'
+      OnExecute = acCategoriaExecute
     end
   end
 end

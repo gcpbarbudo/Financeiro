@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Mask,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.Buttons;
 
 type
   TfrmRelatorio = class(TForm)
@@ -14,8 +14,9 @@ type
     pnlEsquerdo: TPanel;
     dbgUltLanc: TDBGrid;
     pnlCartoes: TPanel;
-    pnlCarteira: TPanel;
     btnPesquisar: TButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
   private
     { Private declarations }
   public

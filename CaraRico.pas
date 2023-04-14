@@ -40,7 +40,13 @@ type
     acAcoes: TActionList;
     acInserir: TAction;
     SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    acGRecorrente: TAction;
+    SpeedButton3: TSpeedButton;
+    acCategoria: TAction;
     procedure acInserirExecute(Sender: TObject);
+    procedure acGRecorrenteExecute(Sender: TObject);
+    procedure acCategoriaExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,11 +60,26 @@ implementation
 
 {$R *.dfm}
 
-uses udm, ufrmRelatorio;
+uses udm, ufrmRelatorio, ufrmGastoRecorrente, ufrmCategoria, ufrmInserirDado;
+
+procedure TfrmPrincipal.acCategoriaExecute(Sender: TObject);
+begin
+//Inserir Categoria
+end;
+
+procedure TfrmPrincipal.acGRecorrenteExecute(Sender: TObject);
+begin
+//Inserir Gasto Recorrente
+end;
 
 procedure TfrmPrincipal.acInserirExecute(Sender: TObject);
 begin
-  showmessage('Ado a ado, se está lendo isso é proletariado');
+//Inserir Custo
+ try
+  frmInserirDado.ShowModal;
+ finally
+
+ end;
 end;
 
 end.

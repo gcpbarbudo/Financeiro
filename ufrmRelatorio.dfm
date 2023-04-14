@@ -63,16 +63,17 @@ object frmRelatorio: TfrmRelatorio
     Height = 578
     Align = alClient
     BevelEdges = []
+    BevelOuter = bvNone
     Color = 16511473
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
     object dbgUltLanc: TDBGrid
       AlignWithMargins = True
-      Left = 11
-      Top = 11
-      Width = 504
-      Height = 478
+      Left = 10
+      Top = 10
+      Width = 506
+      Height = 480
       Margins.Left = 10
       Margins.Top = 10
       Margins.Right = 10
@@ -87,31 +88,47 @@ object frmRelatorio: TfrmRelatorio
     end
     object pnlCartoes: TPanel
       AlignWithMargins = True
-      Left = 4
-      Top = 502
-      Width = 518
+      Left = 3
+      Top = 503
+      Width = 520
       Height = 72
       Align = alBottom
       BevelEdges = []
+      BevelOuter = bvNone
       ShowCaption = False
       TabOrder = 1
-      object pnlCarteira: TPanel
+      ExplicitLeft = 4
+      ExplicitTop = 502
+      ExplicitWidth = 518
+      object SpeedButton1: TSpeedButton
         AlignWithMargins = True
-        Left = 380
-        Top = 11
-        Width = 127
-        Height = 50
-        Margins.Left = 0
+        Left = 379
+        Top = 10
+        Width = 131
+        Height = 52
+        Margins.Left = 10
         Margins.Top = 10
         Margins.Right = 10
         Margins.Bottom = 10
         Align = alRight
-        Alignment = taLeftJustify
-        BevelEdges = []
-        Color = clWhite
-        ParentBackground = False
-        ShowCaption = False
-        TabOrder = 0
+        ExplicitLeft = 386
+        ExplicitTop = 1
+        ExplicitHeight = 70
+      end
+      object SpeedButton2: TSpeedButton
+        AlignWithMargins = True
+        Left = 238
+        Top = 10
+        Width = 131
+        Height = 52
+        Margins.Left = 10
+        Margins.Top = 10
+        Margins.Right = 0
+        Margins.Bottom = 10
+        Align = alRight
+        ExplicitLeft = 386
+        ExplicitTop = 1
+        ExplicitHeight = 70
       end
     end
   end
