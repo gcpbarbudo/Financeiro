@@ -474,10 +474,9 @@ object frmPrincipal: TfrmPrincipal
       Height = 60
       Action = acInserir
       Align = alTop
+      DisabledImageIndex = 0
       Images = dm.imgIcones32
-      ExplicitLeft = 0
-      ExplicitTop = 128
-      ExplicitWidth = 130
+      ExplicitLeft = 4
     end
     object SpeedButton3: TSpeedButton
       AlignWithMargins = True

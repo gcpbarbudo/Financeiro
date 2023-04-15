@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frmGastoRecorrente: TfrmGastoRecorrente
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
@@ -13,6 +13,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCabecalho: TPanel
@@ -26,7 +27,6 @@ object Form1: TForm1
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitWidth = 533
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
@@ -48,9 +48,8 @@ object Form1: TForm1
       ParentColor = False
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 243
-      ExplicitTop = 9
-      ExplicitWidth = 511
+      ExplicitWidth = 140
+      ExplicitHeight = 23
     end
   end
   object pnlEsquerdo: TPanel
@@ -75,8 +74,6 @@ object Form1: TForm1
       BevelOuter = bvNone
       ShowCaption = False
       TabOrder = 0
-      ExplicitTop = 502
-      ExplicitWidth = 518
       object SpeedButton2: TSpeedButton
         AlignWithMargins = True
         Left = 151
@@ -197,10 +194,6 @@ object Form1: TForm1
     ParentBackground = False
     ShowCaption = False
     TabOrder = 2
-    ExplicitLeft = 568
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object DBGrid1: TDBGrid
       AlignWithMargins = True
       Left = 11

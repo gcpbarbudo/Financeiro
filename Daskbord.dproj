@@ -124,11 +124,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ufrmGastoRecorrente.pas">
-            <Form>Form1</Form>
+            <Form>frmGastoRecorrente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ufrmCategoria.pas">
-            <Form>Form2</Form>
+            <Form>frmCategoria</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="ufrmInserirDado.pas">

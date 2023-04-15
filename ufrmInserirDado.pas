@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  System.Actions, Vcl.ActnList;
 
 type
   TfrmInserirDado = class(TForm)
@@ -18,6 +19,11 @@ type
     LabeledEdit2: TLabeledEdit;
     LabeledEdit3: TLabeledEdit;
     LabeledEdit4: TLabeledEdit;
+    acAcoes: TActionList;
+    acAdicionar: TAction;
+    acEditar: TAction;
+    acSair: TAction;
+    SpeedButton3: TSpeedButton;
   private
     { Private declarations }
   public

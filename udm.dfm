@@ -4,9 +4,13 @@ object dm: Tdm
   Width = 215
   object Conexao: TFDConnection
     Params.Strings = (
-      'Database=cararico'
-      'User_Name=root'
-      'DriverID=MySQL')
+      
+        'Database=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Finance' +
+        'iro\BD\CARARICO.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 16

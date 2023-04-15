@@ -1,9 +1,11 @@
 object frmInserirDado: TfrmInserirDado
   Left = 0
   Top = 0
-  Caption = 'frmInserirDado'
-  ClientHeight = 447
-  ClientWidth = 384
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Lan'#231'amento de Custo'
+  ClientHeight = 457
+  ClientWidth = 431
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,12 +13,13 @@ object frmInserirDado: TfrmInserirDado
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCabecalho: TPanel
     Left = 0
     Top = 0
-    Width = 384
+    Width = 431
     Height = 41
     Align = alTop
     BevelEdges = []
@@ -24,13 +27,12 @@ object frmInserirDado: TfrmInserirDado
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = -287
-    ExplicitWidth = 734
+    ExplicitWidth = 384
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
       Top = 11
-      Width = 362
+      Width = 409
       Height = 19
       Margins.Left = 10
       Margins.Top = 10
@@ -54,8 +56,8 @@ object frmInserirDado: TfrmInserirDado
   object pnlEsquerdo: TPanel
     Left = 0
     Top = 41
-    Width = 384
-    Height = 334
+    Width = 431
+    Height = 344
     Align = alClient
     BevelEdges = []
     BevelOuter = bvNone
@@ -63,9 +65,8 @@ object frmInserirDado: TfrmInserirDado
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitTop = -183
-    ExplicitWidth = 427
-    ExplicitHeight = 384
+    ExplicitWidth = 384
+    ExplicitHeight = 334
     object LabeledEdit1: TLabeledEdit
       Left = 11
       Top = 40
@@ -109,22 +110,23 @@ object frmInserirDado: TfrmInserirDado
   end
   object pnlCartoes: TPanel
     Left = 0
-    Top = 375
-    Width = 384
+    Top = 385
+    Width = 431
     Height = 72
     Margins.Left = 0
     Margins.Bottom = 0
     Align = alBottom
     BevelEdges = []
     BevelOuter = bvNone
+    Color = 16511473
+    ParentBackground = False
     ShowCaption = False
     TabOrder = 2
-    ExplicitLeft = 4
-    ExplicitTop = 308
-    ExplicitWidth = 419
+    ExplicitTop = 380
+    ExplicitWidth = 394
     object SpeedButton2: TSpeedButton
       AlignWithMargins = True
-      Left = 102
+      Left = 149
       Top = 10
       Width = 131
       Height = 52
@@ -132,6 +134,7 @@ object frmInserirDado: TfrmInserirDado
       Margins.Top = 10
       Margins.Right = 0
       Margins.Bottom = 10
+      Action = acEditar
       Align = alRight
       ExplicitLeft = 386
       ExplicitTop = 1
@@ -139,7 +142,7 @@ object frmInserirDado: TfrmInserirDado
     end
     object SpeedButton1: TSpeedButton
       AlignWithMargins = True
-      Left = 243
+      Left = 290
       Top = 10
       Width = 131
       Height = 52
@@ -147,10 +150,40 @@ object frmInserirDado: TfrmInserirDado
       Margins.Top = 10
       Margins.Right = 10
       Margins.Bottom = 10
+      Action = acSair
       Align = alRight
       ExplicitLeft = 386
       ExplicitTop = 1
       ExplicitHeight = 70
+    end
+    object SpeedButton3: TSpeedButton
+      AlignWithMargins = True
+      Left = 8
+      Top = 10
+      Width = 131
+      Height = 52
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 0
+      Margins.Bottom = 10
+      Action = acAdicionar
+      Align = alRight
+      ExplicitLeft = 386
+      ExplicitTop = 1
+      ExplicitHeight = 70
+    end
+  end
+  object acAcoes: TActionList
+    Left = 24
+    Top = 313
+    object acAdicionar: TAction
+      Caption = 'Adicionar'
+    end
+    object acEditar: TAction
+      Caption = 'Editar'
+    end
+    object acSair: TAction
+      Caption = 'Sair'
     end
   end
 end

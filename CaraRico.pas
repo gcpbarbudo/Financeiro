@@ -65,11 +65,26 @@ uses udm, ufrmRelatorio, ufrmGastoRecorrente, ufrmCategoria, ufrmInserirDado;
 procedure TfrmPrincipal.acCategoriaExecute(Sender: TObject);
 begin
 //Inserir Categoria
+
+  try
+   frmCategoria.ShowModal;
+  finally
+   FreeAndNil(frmCategoria);
+  end;
+
+
 end;
 
 procedure TfrmPrincipal.acGRecorrenteExecute(Sender: TObject);
 begin
 //Inserir Gasto Recorrente
+
+  try
+   frmGastoRecorrente.ShowModal;
+  finally
+   FreeAndNil(frmGastoRecorrente);
+  end;
+
 end;
 
 procedure TfrmPrincipal.acInserirExecute(Sender: TObject);
@@ -78,7 +93,7 @@ begin
  try
   frmInserirDado.ShowModal;
  finally
-
+  FreeAndNil(frmGastoRecorrente);
  end;
 end;
 

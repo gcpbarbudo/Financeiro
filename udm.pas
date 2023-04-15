@@ -7,7 +7,8 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
   FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
-  System.ImageList, Vcl.ImgList, Vcl.Controls;
+  System.ImageList, Vcl.ImgList, Vcl.Controls, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef;
 
 type
   Tdm = class(TDataModule)

@@ -8,7 +8,7 @@ uses
   System.Actions, Vcl.ActnList, Vcl.Buttons, Vcl.Grids, Data.DB, Vcl.DBGrids;
 
 type
-  TForm1 = class(TForm)
+  TfrmGastoRecorrente = class(TForm)
     pnlCabecalho: TPanel;
     Label1: TLabel;
     pnlEsquerdo: TPanel;
@@ -33,7 +33,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmGastoRecorrente: TfrmGastoRecorrente;
 
 implementation
 

@@ -5,10 +5,10 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Data.DB, Vcl.Grids, Vcl.DBGrids, System.Actions, Vcl.ActnList;
 
 type
-  TForm2 = class(TForm)
+  TfrmCategoria = class(TForm)
     pnlGrid: TPanel;
     DBGrid1: TDBGrid;
     pnlRodape: TPanel;
@@ -18,6 +18,11 @@ type
     Label1: TLabel;
     pnlSuperior: TPanel;
     LabeledEdit1: TLabeledEdit;
+    acAcoes: TActionList;
+    acAdicionar: TAction;
+    acEditar: TAction;
+    acSair: TAction;
+    SpeedButton3: TSpeedButton;
   private
     { Private declarations }
   public
@@ -25,7 +30,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  frmCategoria: TfrmCategoria;
 
 implementation
 

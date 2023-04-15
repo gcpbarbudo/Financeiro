@@ -1,4 +1,4 @@
-object Form2: TForm2
+object frmCategoria: TfrmCategoria
   Left = 0
   Top = 0
   ActiveControl = DBGrid1
@@ -6,7 +6,7 @@ object Form2: TForm2
   BorderStyle = bsSingle
   Caption = 'Categoria'
   ClientHeight = 486
-  ClientWidth = 457
+  ClientWidth = 435
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,31 +14,31 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object pnlGrid: TPanel
     Left = 0
     Top = 122
-    Width = 457
+    Width = 435
     Height = 292
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
     Margins.Bottom = 10
     Align = alClient
+    BiDiMode = bdLeftToRight
     Color = 16511473
+    ParentBiDiMode = False
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = 568
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 457
     object DBGrid1: TDBGrid
       AlignWithMargins = True
       Left = 11
       Top = 11
-      Width = 435
+      Width = 413
       Height = 270
       Margins.Left = 10
       Margins.Top = 10
@@ -56,7 +56,7 @@ object Form2: TForm2
   object pnlRodape: TPanel
     Left = 0
     Top = 414
-    Width = 457
+    Width = 435
     Height = 72
     Margins.Left = 10
     Margins.Top = 0
@@ -65,14 +65,16 @@ object Form2: TForm2
     Align = alBottom
     BevelEdges = []
     BevelOuter = bvNone
+    BiDiMode = bdLeftToRight
+    Color = 16511473
+    ParentBiDiMode = False
+    ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 4
-    ExplicitTop = 298
-    ExplicitWidth = 419
+    ExplicitWidth = 457
     object SpeedButton2: TSpeedButton
       AlignWithMargins = True
-      Left = 175
+      Left = 153
       Top = 10
       Width = 131
       Height = 52
@@ -80,6 +82,7 @@ object Form2: TForm2
       Margins.Top = 10
       Margins.Right = 0
       Margins.Bottom = 10
+      Action = acEditar
       Align = alRight
       ExplicitLeft = 386
       ExplicitTop = 1
@@ -87,7 +90,7 @@ object Form2: TForm2
     end
     object SpeedButton1: TSpeedButton
       AlignWithMargins = True
-      Left = 316
+      Left = 294
       Top = 10
       Width = 131
       Height = 52
@@ -95,6 +98,23 @@ object Form2: TForm2
       Margins.Top = 10
       Margins.Right = 10
       Margins.Bottom = 10
+      Action = acSair
+      Align = alRight
+      ExplicitLeft = 386
+      ExplicitTop = 1
+      ExplicitHeight = 70
+    end
+    object SpeedButton3: TSpeedButton
+      AlignWithMargins = True
+      Left = 12
+      Top = 10
+      Width = 131
+      Height = 52
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 0
+      Margins.Bottom = 10
+      Action = acAdicionar
       Align = alRight
       ExplicitLeft = 386
       ExplicitTop = 1
@@ -104,7 +124,7 @@ object Form2: TForm2
   object pnlCabecalho: TPanel
     Left = 0
     Top = 0
-    Width = 457
+    Width = 435
     Height = 41
     Align = alTop
     BevelEdges = []
@@ -112,13 +132,12 @@ object Form2: TForm2
     ParentBackground = False
     ShowCaption = False
     TabOrder = 2
-    ExplicitTop = 89
-    ExplicitWidth = 447
+    ExplicitWidth = 457
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
       Top = 11
-      Width = 435
+      Width = 413
       Height = 19
       Margins.Left = 10
       Margins.Top = 10
@@ -142,7 +161,7 @@ object Form2: TForm2
   object pnlSuperior: TPanel
     Left = 0
     Top = 41
-    Width = 457
+    Width = 435
     Height = 81
     Margins.Left = 10
     Margins.Top = 10
@@ -150,15 +169,16 @@ object Form2: TForm2
     Margins.Bottom = 0
     Align = alTop
     BevelEdges = []
+    BiDiMode = bdLeftToRight
     Color = 16511473
+    ParentBiDiMode = False
     ParentBackground = False
     ShowCaption = False
     TabOrder = 3
-    ExplicitTop = 8
-    ExplicitWidth = 447
+    ExplicitWidth = 457
     object LabeledEdit1: TLabeledEdit
       AlignWithMargins = True
-      Left = 24
+      Left = 11
       Top = 31
       Width = 401
       Height = 21
@@ -170,6 +190,19 @@ object Form2: TForm2
       EditLabel.Height = 13
       EditLabel.Caption = 'Descri'#231#227'o'
       TabOrder = 0
+    end
+  end
+  object acAcoes: TActionList
+    Left = 24
+    Top = 313
+    object acAdicionar: TAction
+      Caption = 'Adicionar'
+    end
+    object acEditar: TAction
+      Caption = 'Editar'
+    end
+    object acSair: TAction
+      Caption = 'Sair'
     end
   end
 end
