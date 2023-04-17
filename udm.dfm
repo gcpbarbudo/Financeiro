@@ -1,7 +1,7 @@
 object dm: Tdm
   OldCreateOrder = False
-  Height = 150
-  Width = 215
+  Height = 272
+  Width = 301
   object Conexao: TFDConnection
     Params.Strings = (
       
@@ -555,5 +555,9 @@ object dm: Tdm
       E003FFFF000000000000000000000000F007FFFF000000000000000000000000
       FC1FFFFF00000000000000000000000000000000000000000000000000000000
       000000000000}
+  end
+  object DriverFB: TFDPhysFBDriverLink
+    Left = 32
+    Top = 72
   end
 end

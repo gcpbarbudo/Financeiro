@@ -3,24 +3,28 @@ unit ufrmLogin;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, System.Actions, Vcl.ActnList, Vcl.Buttons;
 
 type
   TfrmLogin = class(TForm)
     pnlEsquerdo: TPanel;
-    Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
-    Panel1: TPanel;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
     AcAcoes: TActionList;
-    Cancelar: TAction;
+    acCancelar: TAction;
     acEntrar: TAction;
-    Edit1: TEdit;
-    Edit2: TEdit;
+    edtUsuario: TEdit;
+    edtSenha: TEdit;
+    Image1: TImage;
+    GridPanel1: TGridPanel;
+    btnEntrar: TSpeedButton;
+    btnAcessar: TSpeedButton;
+    procedure acCancelarExecute(Sender: TObject);
+    procedure acEntrarExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -33,5 +37,47 @@ var
 implementation
 
 {$R *.dfm}
+
+uses ufrmPrincipal, FireDAC.Comp.Client, udm;
+
+procedure TfrmLogin.acCancelarExecute(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmLogin.acEntrarExecute(Sender: TObject);
+var
+  qryAcesso: TFDQuery;
+begin
+  try
+    qryAcesso := TFDQuery.Create(Self);
+    qryAcesso.Connection := dm.Conexao;
+    qryAcesso.SQL.Text := 'SELECT U.USU_FROM USUARIO...';
+
+    if (edtUsuario.Text = 'Barbudo') and (edtSenha.Text = '12345') then
+    begin
+      frmPrincipal.Acesso := true;
+      Close;
+    end
+    else
+    begin
+      MessageBox(Handle,
+        'Usuário ou senha incorretos, verifique suas credenciais e tente novamente',
+        'Acesso Negado', MB_OK + MB_ICONINFORMATION);
+      Abort;
+    end;
+  finally
+    FreeAndNil(qryAcesso);
+  end;
+end;
+
+procedure TfrmLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if not frmPrincipal.Acesso then
+  begin
+    Application.Terminate;
+  end;
+
+end;
 
 end.

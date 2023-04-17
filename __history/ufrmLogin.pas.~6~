@@ -1,0 +1,74 @@
+unit ufrmLogin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, System.Actions, Vcl.ActnList, Vcl.Buttons;
+
+type
+  TfrmLogin = class(TForm)
+    pnlEsquerdo: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    AcAcoes: TActionList;
+    acCancelar: TAction;
+    acEntrar: TAction;
+    edtUsuario: TEdit;
+    edtSenha: TEdit;
+    Image1: TImage;
+    GridPanel1: TGridPanel;
+    btnEntrar: TSpeedButton;
+    btnAcessar: TSpeedButton;
+    procedure acCancelarExecute(Sender: TObject);
+    procedure acEntrarExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+uses ufrmPrincipal, FireDAC.Comp.Client;
+
+procedure TfrmLogin.acCancelarExecute(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmLogin.acEntrarExecute(Sender: TObject);
+var
+  qryAcesso : TFDQuery;
+begin
+  if (edtUsuario.Text = 'Barbudo') and (edtSenha.Text = '12345') then
+  begin
+    frmPrincipal.Acesso := true;
+    Close;
+    end
+  else
+    begin
+      MessageBox(Handle, 'Usuário ou senha incorretos, verifique suas credenciais e tente novamente', 'Acesso Negado', MB_OK + MB_ICONINFORMATION);
+      Abort;
+    end;
+
+end;
+
+procedure TfrmLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ if not frmPrincipal.Acesso then
+  begin
+    Application.Terminate;
+  end;
+
+end;
+
+end.

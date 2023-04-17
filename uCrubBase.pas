@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TCrudBase = class(TForm)
+  TfrmCrudBase = class(TForm)
   private
     { Private declarations }
   public
@@ -15,7 +15,7 @@ type
   end;
 
 var
-  CrudBase: TCrudBase;
+  frmCrudBase: TfrmCrudBase;
 
 implementation
 

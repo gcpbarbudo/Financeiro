@@ -29,15 +29,15 @@ object frmPrincipal: TfrmPrincipal
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
-      Top = 11
+      Top = 1
       Width = 978
-      Height = 19
+      Height = 29
       Margins.Left = 10
-      Margins.Top = 10
+      Margins.Top = 0
       Margins.Right = 10
       Margins.Bottom = 10
       Align = alClient
-      Caption = 'Dashbord'
+      Caption = 'Dashboard'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -47,7 +47,7 @@ object frmPrincipal: TfrmPrincipal
       ParentColor = False
       ParentFont = False
       Layout = tlCenter
-      ExplicitWidth = 76
+      ExplicitWidth = 85
       ExplicitHeight = 23
     end
   end
@@ -455,10 +455,14 @@ object frmPrincipal: TfrmPrincipal
     end
     object SpeedButton1: TSpeedButton
       AlignWithMargins = True
-      Left = 3
-      Top = 263
-      Width = 124
+      Left = 10
+      Top = 268
+      Width = 110
       Height = 60
+      Margins.Left = 10
+      Margins.Top = 0
+      Margins.Right = 10
+      Margins.Bottom = 10
       Action = acCategoria
       Align = alTop
       Images = dm.imgIcones32
@@ -468,22 +472,32 @@ object frmPrincipal: TfrmPrincipal
     end
     object SpeedButton2: TSpeedButton
       AlignWithMargins = True
-      Left = 3
-      Top = 131
-      Width = 124
+      Left = 10
+      Top = 128
+      Width = 110
       Height = 60
+      Margins.Left = 10
+      Margins.Top = 0
+      Margins.Right = 10
+      Margins.Bottom = 10
       Action = acInserir
       Align = alTop
       DisabledImageIndex = 0
       Images = dm.imgIcones32
       ExplicitLeft = 4
+      ExplicitTop = 131
+      ExplicitWidth = 124
     end
     object SpeedButton3: TSpeedButton
       AlignWithMargins = True
-      Left = 3
-      Top = 197
-      Width = 124
+      Left = 10
+      Top = 198
+      Width = 110
       Height = 60
+      Margins.Left = 10
+      Margins.Top = 0
+      Margins.Right = 10
+      Margins.Bottom = 10
       Action = acGRecorrente
       Align = alTop
       Images = dm.imgIcones32
@@ -531,6 +545,7 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 0
+        OnClick = pnlCarteiraClick
         object Label4: TLabel
           AlignWithMargins = True
           Left = 10
@@ -590,6 +605,7 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 1
+        OnClick = pnlMoradiaClick
         object Label3: TLabel
           AlignWithMargins = True
           Left = 11
@@ -650,6 +666,7 @@ object frmPrincipal: TfrmPrincipal
         ParentBackground = False
         ShowCaption = False
         TabOrder = 2
+        OnClick = pnlComprasClick
         object Label2: TLabel
           AlignWithMargins = True
           Left = 10

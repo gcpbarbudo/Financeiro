@@ -47,6 +47,9 @@ type
     procedure acInserirExecute(Sender: TObject);
     procedure acGRecorrenteExecute(Sender: TObject);
     procedure acCategoriaExecute(Sender: TObject);
+    procedure pnlComprasClick(Sender: TObject);
+    procedure pnlMoradiaClick(Sender: TObject);
+    procedure pnlCarteiraClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -95,6 +98,33 @@ begin
  finally
   FreeAndNil(frmGastoRecorrente);
  end;
+end;
+
+procedure TfrmPrincipal.pnlCarteiraClick(Sender: TObject);
+begin
+  try
+    frmRelatorio.ShowModal;
+  finally
+    FreeAndNil(frmRelatorio);
+  end;
+end;
+
+procedure TfrmPrincipal.pnlComprasClick(Sender: TObject);
+begin
+  try
+    frmRelatorio.ShowModal;
+  finally
+    FreeAndNil(frmRelatorio);
+  end;
+end;
+
+procedure TfrmPrincipal.pnlMoradiaClick(Sender: TObject);
+begin
+  try
+    frmRelatorio.ShowModal;
+  finally
+    FreeAndNil(frmRelatorio);
+  end;
 end;
 
 end.

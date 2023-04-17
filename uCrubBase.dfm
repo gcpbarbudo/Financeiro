@@ -1,7 +1,7 @@
-object CrudBase: TCrudBase
+object frmCrudBase: TfrmCrudBase
   Left = 0
   Top = 0
-  Caption = 'CrudBase'
+  Caption = 'frmCrudBase'
   ClientHeight = 645
   ClientWidth = 602
   Color = clBtnFace
