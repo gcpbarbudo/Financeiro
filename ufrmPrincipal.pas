@@ -40,10 +40,10 @@ type
     DBGrid1: TDBGrid;
     acAcoes: TActionList;
     acInserir: TAction;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
+    SpeedButton1: TButton;
+    SpeedButton2: TButton;
     acGRecorrente: TAction;
-    SpeedButton3: TSpeedButton;
+    SpeedButton3: TButton;
     acCategoria: TAction;
     procedure acInserirExecute(Sender: TObject);
     procedure acGRecorrenteExecute(Sender: TObject);

@@ -237,13 +237,12 @@ object frmLogin: TfrmLogin
     ParentBackground = False
     ShowCaption = False
     TabOrder = 2
-    ExplicitWidth = 301
     object Label1: TLabel
       Left = 10
       Top = 3
-      Width = 85
+      Width = 94
       Height = 13
-      Caption = 'Informe o usu'#225'rio'
+      Caption = 'Informe o nickname'
     end
     object Label2: TLabel
       Left = 8
@@ -257,7 +256,9 @@ object frmLogin: TfrmLogin
       Top = 62
       Width = 233
       Height = 21
+      PasswordChar = #8226
       TabOrder = 0
+      OnKeyPress = edtSenhaKeyPress
     end
   end
   object edtUsuario: TEdit
@@ -301,10 +302,7 @@ object frmLogin: TfrmLogin
       end>
     ShowCaption = False
     TabOrder = 1
-    ExplicitTop = 256
-    ExplicitWidth = 281
-    ExplicitHeight = 60
-    object btnEntrar: TSpeedButton
+    object btnEntrar: TButton
       AlignWithMargins = True
       Left = 25
       Top = 10
@@ -316,10 +314,9 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 10
       Action = acEntrar
       Align = alRight
-      ExplicitLeft = 48
-      ExplicitHeight = 60
+      TabOrder = 0
     end
-    object btnAcessar: TSpeedButton
+    object btnAcessar: TButton
       AlignWithMargins = True
       Left = 125
       Top = 10
@@ -331,8 +328,7 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 10
       Action = acCancelar
       Align = alLeft
-      ExplicitLeft = 150
-      ExplicitHeight = 60
+      TabOrder = 1
     end
   end
   object AcAcoes: TActionList

@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
   FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
   System.ImageList, Vcl.ImgList, Vcl.Controls, FireDAC.Phys.FB,
-  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase;
+  FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.DApt;
 
 type
   Tdm = class(TDataModule)

@@ -73,11 +73,11 @@ object frmPrincipal: TfrmPrincipal
     object pnlRestante: TPanel
       AlignWithMargins = True
       Left = 10
-      Top = 12
+      Top = 14
       Width = 202
-      Height = 107
+      Height = 105
       Margins.Left = 10
-      Margins.Top = 12
+      Margins.Top = 14
       Margins.Right = 10
       Margins.Bottom = 10
       Align = alTop
@@ -90,7 +90,7 @@ object frmPrincipal: TfrmPrincipal
       object lblRestante: TLabel
         AlignWithMargins = True
         Left = 10
-        Top = 81
+        Top = 79
         Width = 182
         Height = 16
         Margins.Left = 10
@@ -106,6 +106,7 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
+        ExplicitTop = 81
         ExplicitWidth = 52
       end
       object Label5: TLabel
@@ -454,29 +455,29 @@ object frmPrincipal: TfrmPrincipal
       ExplicitTop = 11
       ExplicitWidth = 108
     end
-    object SpeedButton1: TSpeedButton
+    object SpeedButton1: TButton
       AlignWithMargins = True
       Left = 10
-      Top = 268
+      Top = 288
       Width = 110
-      Height = 60
+      Height = 70
       Margins.Left = 10
       Margins.Top = 0
       Margins.Right = 10
       Margins.Bottom = 10
       Action = acCategoria
       Align = alTop
+      ImageAlignment = iaTop
+      ImageMargins.Top = 10
       Images = dm.imgIcones32
-      ExplicitLeft = 0
-      ExplicitTop = 128
-      ExplicitWidth = 130
+      TabOrder = 0
     end
-    object SpeedButton2: TSpeedButton
+    object SpeedButton2: TButton
       AlignWithMargins = True
       Left = 10
       Top = 128
       Width = 110
-      Height = 60
+      Height = 70
       Margins.Left = 10
       Margins.Top = 0
       Margins.Right = 10
@@ -484,27 +485,27 @@ object frmPrincipal: TfrmPrincipal
       Action = acInserir
       Align = alTop
       DisabledImageIndex = 0
+      ImageAlignment = iaTop
+      ImageMargins.Top = 10
       Images = dm.imgIcones32
-      ExplicitLeft = 4
-      ExplicitTop = 131
-      ExplicitWidth = 124
+      TabOrder = 1
     end
-    object SpeedButton3: TSpeedButton
+    object SpeedButton3: TButton
       AlignWithMargins = True
       Left = 10
-      Top = 198
+      Top = 208
       Width = 110
-      Height = 60
+      Height = 70
       Margins.Left = 10
       Margins.Top = 0
       Margins.Right = 10
       Margins.Bottom = 10
       Action = acGRecorrente
       Align = alTop
+      ImageAlignment = iaTop
+      ImageMargins.Top = 10
       Images = dm.imgIcones32
-      ExplicitLeft = 0
-      ExplicitTop = 128
-      ExplicitWidth = 130
+      TabOrder = 2
     end
   end
   object pnlCentral: TPanel
