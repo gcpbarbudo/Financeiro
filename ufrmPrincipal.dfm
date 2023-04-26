@@ -106,7 +106,6 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Arial'
         Font.Style = []
         ParentFont = False
-        ExplicitTop = 81
         ExplicitWidth = 52
       end
       object Label5: TLabel
@@ -749,7 +748,7 @@ object frmPrincipal: TfrmPrincipal
   object acAcoes: TActionList
     Images = dm.imgIcones32
     Left = 24
-    Top = 392
+    Top = 416
     object acInserir: TAction
       Category = 'Dashbord'
       Caption = 'Inserir'

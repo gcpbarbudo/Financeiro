@@ -24,8 +24,6 @@ object frmCrudBase: TfrmCrudBase
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = -140
-    ExplicitWidth = 748
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
@@ -64,7 +62,6 @@ object frmCrudBase: TfrmCrudBase
     ActivePage = tabDetalhe
     Align = alClient
     TabOrder = 1
-    ExplicitWidth = 597
     object tabListagem: TTabSheet
       Caption = '&Listagem'
       object pnlDados: TPanel
@@ -76,10 +73,6 @@ object frmCrudBase: TfrmCrudBase
         BevelOuter = bvNone
         ShowCaption = False
         TabOrder = 0
-        ExplicitLeft = 48
-        ExplicitTop = 56
-        ExplicitWidth = 185
-        ExplicitHeight = 41
         object dbgDados: TDBGrid
           AlignWithMargins = True
           Left = 10
@@ -113,12 +106,10 @@ object frmCrudBase: TfrmCrudBase
         ButtonWidth = 57
         Caption = 'tdDados'
         TabOrder = 0
-        ExplicitWidth = 605
         object ToolButton1: TToolButton
           Left = 0
           Top = 0
-          Caption = 'ToolButton1'
-          ImageIndex = 0
+          Action = acFechar
         end
         object ToolButton2: TToolButton
           Left = 57
@@ -131,6 +122,24 @@ object frmCrudBase: TfrmCrudBase
           Top = 0
           Caption = 'ToolButton3'
           ImageIndex = 2
+        end
+        object ToolButton4: TToolButton
+          Left = 171
+          Top = 0
+          Caption = 'ToolButton4'
+          ImageIndex = 3
+        end
+        object ToolButton5: TToolButton
+          Left = 228
+          Top = 0
+          Caption = 'ToolButton5'
+          ImageIndex = 4
+        end
+        object ToolButton6: TToolButton
+          Left = 285
+          Top = 0
+          Caption = 'ToolButton6'
+          ImageIndex = 5
         end
       end
     end
@@ -147,42 +156,67 @@ object frmCrudBase: TfrmCrudBase
     object acPrimeiro: TAction
       Category = 'Navegacao'
       Caption = 'Primeiro'
+      ImageIndex = 7
+      OnExecute = acPrimeiroExecute
     end
     object acAnterior: TAction
       Category = 'Navegacao'
       Caption = 'Anterior'
+      ImageIndex = 10
+      OnExecute = acAnteriorExecute
     end
     object acProximo: TAction
       Category = 'Navegacao'
       Caption = 'Pr'#243'ximo'
+      ImageIndex = 1
+      OnExecute = acProximoExecute
     end
     object acUltimo: TAction
       Category = 'Navegacao'
       Caption = #218'ltimo'
+      ImageIndex = 8
+      OnExecute = acUltimoExecute
     end
     object acInserir: TAction
       Category = 'Dados'
       Caption = 'Inserir'
+      ImageIndex = 9
+      OnExecute = acInserirExecute
     end
     object acAlterar: TAction
       Category = 'Dados'
       Caption = 'Alterar'
+      ImageIndex = 5
+      OnExecute = acAlterarExecute
     end
     object acExcluir: TAction
       Category = 'Dados'
       Caption = 'Excluir'
+      ImageIndex = 3
+      OnExecute = acExcluirExecute
     end
     object acGravar: TAction
       Category = 'Dados'
       Caption = 'Gravar'
+      ImageIndex = 8
+      OnExecute = acGravarExecute
     end
     object acCancelar: TAction
       Category = 'Dados'
       Caption = 'Cancelar'
+      OnExecute = acCancelarExecute
     end
     object acAtualizar: TAction
       Category = 'Outros'
       Caption = 'Atualizar'
+      ImageIndex = 11
+      OnExecute = acAtualizarExecute
+    end
+    object acFechar: TAction
+      Category = 'Outros'
+      Caption = 'Fechar'
+      ImageIndex = 3
+      OnExecute = acFecharExecute
     end
   end
 end

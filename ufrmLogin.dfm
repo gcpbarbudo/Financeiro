@@ -236,7 +236,7 @@ object frmLogin: TfrmLogin
     Caption = 'dm.imgIcones32'
     ParentBackground = False
     ShowCaption = False
-    TabOrder = 2
+    TabOrder = 0
     object Label1: TLabel
       Left = 10
       Top = 3
@@ -257,16 +257,17 @@ object frmLogin: TfrmLogin
       Width = 233
       Height = 21
       PasswordChar = #8226
-      TabOrder = 0
+      TabOrder = 1
       OnKeyPress = edtSenhaKeyPress
     end
-  end
-  object edtUsuario: TEdit
-    Left = 8
-    Top = 146
-    Width = 233
-    Height = 21
-    TabOrder = 0
+    object edtUsuario: TEdit
+      Left = 8
+      Top = 19
+      Width = 233
+      Height = 21
+      TabOrder = 0
+      OnKeyPress = edtUsuarioKeyPress
+    end
   end
   object GridPanel1: TGridPanel
     AlignWithMargins = True

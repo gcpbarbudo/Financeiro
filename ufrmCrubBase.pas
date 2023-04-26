@@ -33,6 +33,21 @@ type
     acGravar: TAction;
     acCancelar: TAction;
     acAtualizar: TAction;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    ToolButton6: TToolButton;
+    acFechar: TAction;
+    procedure acInserirExecute(Sender: TObject);
+    procedure acAlterarExecute(Sender: TObject);
+    procedure acExcluirExecute(Sender: TObject);
+    procedure acGravarExecute(Sender: TObject);
+    procedure acCancelarExecute(Sender: TObject);
+    procedure acPrimeiroExecute(Sender: TObject);
+    procedure acAnteriorExecute(Sender: TObject);
+    procedure acProximoExecute(Sender: TObject);
+    procedure acUltimoExecute(Sender: TObject);
+    procedure acAtualizarExecute(Sender: TObject);
+    procedure acFecharExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,5 +62,70 @@ implementation
 {$R *.dfm}
 
 uses udm;
+
+procedure TfrmCrudBase.acAlterarExecute(Sender: TObject);
+begin
+//Alterar
+dsDados.DataSet.Edit;
+end;
+
+procedure TfrmCrudBase.acAnteriorExecute(Sender: TObject);
+begin
+//Anterior
+dsDados.DataSet.Prior;
+end;
+
+procedure TfrmCrudBase.acAtualizarExecute(Sender: TObject);
+begin
+//Atualizar
+  dsDados.DataSet.Refresh;
+end;
+
+procedure TfrmCrudBase.acCancelarExecute(Sender: TObject);
+begin
+//Cancelar
+dsDados.DataSet.Cancel;
+end;
+
+procedure TfrmCrudBase.acExcluirExecute(Sender: TObject);
+begin
+//Delete
+dsDados.DataSet.Delete;
+end;
+
+procedure TfrmCrudBase.acFecharExecute(Sender: TObject);
+begin
+dsDados.DataSet.Close;
+end;
+
+procedure TfrmCrudBase.acGravarExecute(Sender: TObject);
+begin
+//Salvar
+dsDados.DataSet.Post;
+end;
+
+procedure TfrmCrudBase.acInserirExecute(Sender: TObject);
+begin
+//Incluir
+dsDados.DataSet.Append;
+end;
+
+procedure TfrmCrudBase.acPrimeiroExecute(Sender: TObject);
+begin
+//Voltar no primeiro
+dsDados.DataSet.First;
+end;
+
+procedure TfrmCrudBase.acProximoExecute(Sender: TObject);
+begin
+//Proximo
+  dsDados.DataSet.Next;
+end;
+
+procedure TfrmCrudBase.acUltimoExecute(Sender: TObject);
+begin
+//Ultimo
+dsDados.DataSet.Last;
+end;
 
 end.

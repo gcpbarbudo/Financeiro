@@ -16,16 +16,17 @@ type
     AcAcoes: TActionList;
     acCancelar: TAction;
     acEntrar: TAction;
-    edtUsuario: TEdit;
     edtSenha: TEdit;
     Image1: TImage;
     GridPanel1: TGridPanel;
     btnEntrar: TButton;
     btnAcessar: TButton;
+    edtUsuario: TEdit;
     procedure acCancelarExecute(Sender: TObject);
     procedure acEntrarExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edtSenhaKeyPress(Sender: TObject; var Key: Char);
+    procedure edtUsuarioKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -53,7 +54,7 @@ begin
   try
     qryAcesso := TFDQuery.Create(Self);
     qryAcesso.Connection := dm.Conexao;
-    qryAcesso.SQL.Text := 'SELECT USU.USU_NICKNAME, USU.USU_NOME FROM USUARIO USU WHERE USU.USU_NICKNAME = :NICKNAME AND USU.USU_SENHA = :SENHA';
+    qryAcesso.SQL.Text := 'SELECT USU.USU_NICKNAME, USU.USU_NOME FROM USUARIO USU WHERE USU.USU_NICKNAME = UPPER(:NICKNAME) AND USU.USU_SENHA = :SENHA';
     qryAcesso.ParamByName('NICKNAME').AsString := edtUsuario.Text;
     qryAcesso.ParamByName('SENHA').AsString := edtSenha.Text;
     qryAcesso.Open;
@@ -78,6 +79,12 @@ procedure TfrmLogin.edtSenhaKeyPress(Sender: TObject; var Key: Char);
 begin
   if key = #13 then
     acEntrarExecute(Self);
+end;
+
+procedure TfrmLogin.edtUsuarioKeyPress(Sender: TObject; var Key: Char);
+begin
+if key = #13 then
+  acEntrarExecute(Self);
 end;
 
 procedure TfrmLogin.FormClose(Sender: TObject; var Action: TCloseAction);
