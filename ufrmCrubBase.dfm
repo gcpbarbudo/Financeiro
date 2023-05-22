@@ -3,7 +3,7 @@ object frmCrudBase: TfrmCrudBase
   Top = 0
   Caption = 'Formul'#225'rio'
   ClientHeight = 479
-  ClientWidth = 666
+  ClientWidth = 904
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,7 @@ object frmCrudBase: TfrmCrudBase
   object pnlCabecalho: TPanel
     Left = 0
     Top = 0
-    Width = 666
+    Width = 904
     Height = 41
     Align = alTop
     BevelEdges = []
@@ -24,11 +24,12 @@ object frmCrudBase: TfrmCrudBase
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
+    ExplicitLeft = 152
     object Label1: TLabel
       AlignWithMargins = True
       Left = 11
       Top = 11
-      Width = 644
+      Width = 882
       Height = 19
       Margins.Left = 10
       Margins.Top = 10
@@ -53,13 +54,13 @@ object frmCrudBase: TfrmCrudBase
     AlignWithMargins = True
     Left = 10
     Top = 51
-    Width = 646
+    Width = 884
     Height = 418
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
     Margins.Bottom = 10
-    ActivePage = tabDetalhe
+    ActivePage = tabListagem
     Align = alClient
     TabOrder = 1
     object tabListagem: TTabSheet
@@ -67,7 +68,7 @@ object frmCrudBase: TfrmCrudBase
       object pnlDados: TPanel
         Left = 0
         Top = 0
-        Width = 638
+        Width = 876
         Height = 390
         Align = alClient
         BevelOuter = bvNone
@@ -76,11 +77,11 @@ object frmCrudBase: TfrmCrudBase
         object dbgDados: TDBGrid
           AlignWithMargins = True
           Left = 10
-          Top = 10
-          Width = 618
-          Height = 370
+          Top = 94
+          Width = 856
+          Height = 286
           Margins.Left = 10
-          Margins.Top = 10
+          Margins.Top = 5
           Margins.Right = 10
           Margins.Bottom = 10
           Align = alClient
@@ -92,6 +93,68 @@ object frmCrudBase: TfrmCrudBase
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
         end
+        object gbxPesquisa: TGroupBox
+          AlignWithMargins = True
+          Left = 5
+          Top = 5
+          Width = 866
+          Height = 84
+          Margins.Left = 5
+          Margins.Top = 5
+          Margins.Right = 5
+          Margins.Bottom = 0
+          Align = alTop
+          Caption = 'Pesquisa'
+          Color = clWhite
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 1
+          Visible = False
+          OnMouseMove = gbxPesquisaMouseMove
+          object Label2: TLabel
+            AlignWithMargins = True
+            Left = 12
+            Top = 25
+            Width = 37
+            Height = 47
+            Margins.Left = 10
+            Margins.Top = 10
+            Margins.Right = 10
+            Margins.Bottom = 10
+            Align = alLeft
+            Caption = 'Campo'
+            ExplicitHeight = 39
+          end
+          object lblConteudo: TLabel
+            Left = 199
+            Top = 25
+            Width = 47
+            Height = 13
+            Caption = 'Conte'#250'do'
+          end
+          object DBEdit1: TDBEdit
+            Left = 12
+            Top = 39
+            Width = 181
+            Height = 21
+            TabOrder = 0
+          end
+          object DBEdit2: TDBEdit
+            Left = 199
+            Top = 39
+            Width = 298
+            Height = 21
+            TabOrder = 1
+          end
+          object btnLocalizar: TButton
+            Left = 503
+            Top = 35
+            Width = 114
+            Height = 25
+            Caption = 'Localizar'
+            TabOrder = 2
+          end
+        end
       end
     end
     object tabDetalhe: TTabSheet
@@ -100,63 +163,109 @@ object frmCrudBase: TfrmCrudBase
       object tdDados: TToolBar
         Left = 0
         Top = 0
-        Width = 638
+        Width = 876
         Height = 49
-        ButtonHeight = 49
-        ButtonWidth = 57
+        ButtonHeight = 52
+        ButtonWidth = 49
         Caption = 'tdDados'
+        Images = dm.imgIcones32
+        ShowCaptions = True
         TabOrder = 0
         object ToolButton1: TToolButton
           Left = 0
           Top = 0
           Action = acFechar
         end
+        object ToolButton10: TToolButton
+          Left = 49
+          Top = 0
+          Width = 8
+          Caption = 'ToolButton10'
+          ImageIndex = 9
+          Style = tbsSeparator
+        end
         object ToolButton2: TToolButton
           Left = 57
           Top = 0
-          Caption = 'ToolButton2'
-          ImageIndex = 1
+          Action = acUltimo
         end
         object ToolButton3: TToolButton
-          Left = 114
+          Left = 106
           Top = 0
-          Caption = 'ToolButton3'
-          ImageIndex = 2
+          Action = acAnterior
         end
         object ToolButton4: TToolButton
-          Left = 171
+          Left = 155
           Top = 0
-          Caption = 'ToolButton4'
-          ImageIndex = 3
+          Action = acProximo
         end
         object ToolButton5: TToolButton
-          Left = 228
+          Left = 204
           Top = 0
-          Caption = 'ToolButton5'
-          ImageIndex = 4
+          Action = acPrimeiro
+        end
+        object ToolButton11: TToolButton
+          Left = 253
+          Top = 0
+          Width = 8
+          Caption = 'ToolButton11'
+          ImageIndex = 9
+          Style = tbsSeparator
         end
         object ToolButton6: TToolButton
-          Left = 285
+          Left = 261
           Top = 0
-          Caption = 'ToolButton6'
-          ImageIndex = 5
+          Action = acInserir
+        end
+        object ToolButton7: TToolButton
+          Left = 310
+          Top = 0
+          Action = acAlterar
+        end
+        object ToolButton8: TToolButton
+          Left = 359
+          Top = 0
+          Action = acExcluir
+        end
+        object ToolButton9: TToolButton
+          Left = 408
+          Top = 0
+          Action = acGravar
+        end
+        object ToolButton12: TToolButton
+          Left = 457
+          Top = 0
+          Action = acCancelar
+        end
+        object ToolButton13: TToolButton
+          Left = 506
+          Top = 0
+          Width = 8
+          Caption = 'ToolButton13'
+          ImageIndex = 0
+          Style = tbsSeparator
+        end
+        object ToolButton14: TToolButton
+          Left = 514
+          Top = 0
+          Action = acAtualizar
         end
       end
     end
   end
   object dsDados: TDataSource
     AutoEdit = False
-    Left = 462
+    Left = 814
     Top = 3
   end
   object acAcoes: TActionList
     Images = dm.imgIcones32
-    Left = 518
+    Left = 870
     Top = 3
     object acPrimeiro: TAction
       Category = 'Navegacao'
       Caption = 'Primeiro'
-      ImageIndex = 7
+      ImageIndex = 6
       OnExecute = acPrimeiroExecute
     end
     object acAnterior: TAction
@@ -174,7 +283,7 @@ object frmCrudBase: TfrmCrudBase
     object acUltimo: TAction
       Category = 'Navegacao'
       Caption = #218'ltimo'
-      ImageIndex = 8
+      ImageIndex = 7
       OnExecute = acUltimoExecute
     end
     object acInserir: TAction
@@ -198,12 +307,13 @@ object frmCrudBase: TfrmCrudBase
     object acGravar: TAction
       Category = 'Dados'
       Caption = 'Gravar'
-      ImageIndex = 8
+      ImageIndex = 13
       OnExecute = acGravarExecute
     end
     object acCancelar: TAction
       Category = 'Dados'
       Caption = 'Cancelar'
+      ImageIndex = 14
       OnExecute = acCancelarExecute
     end
     object acAtualizar: TAction
@@ -215,7 +325,7 @@ object frmCrudBase: TfrmCrudBase
     object acFechar: TAction
       Category = 'Outros'
       Caption = 'Fechar'
-      ImageIndex = 3
+      ImageIndex = 12
       OnExecute = acFecharExecute
     end
   end

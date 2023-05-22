@@ -602,16 +602,18 @@ object frmPrincipal: TfrmPrincipal
         Margins.Bottom = 10
         Align = alLeft
         BevelEdges = []
+        BevelOuter = bvNone
         Color = 15292265
         ParentBackground = False
         ShowCaption = False
         TabOrder = 1
         OnClick = pnlMoradiaClick
+        ExplicitTop = 9
         object Label3: TLabel
           AlignWithMargins = True
-          Left = 11
-          Top = 78
-          Width = 178
+          Left = 10
+          Top = 79
+          Width = 180
           Height = 16
           Margins.Left = 10
           Margins.Top = 10
@@ -626,13 +628,15 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = []
           ParentFont = False
+          ExplicitLeft = 11
+          ExplicitTop = 78
           ExplicitWidth = 46
         end
         object lblVMoradia: TLabel
           AlignWithMargins = True
-          Left = 11
-          Top = 11
-          Width = 178
+          Left = 10
+          Top = 10
+          Width = 180
           Height = 19
           Margins.Left = 10
           Margins.Top = 10
@@ -647,7 +651,7 @@ object frmPrincipal: TfrmPrincipal
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitWidth = 90
+          ExplicitWidth = 178
         end
       end
       object pnlCompras: TPanel
@@ -668,6 +672,8 @@ object frmPrincipal: TfrmPrincipal
         ShowCaption = False
         TabOrder = 2
         OnClick = pnlComprasClick
+        ExplicitLeft = 9
+        ExplicitTop = 9
         object Label2: TLabel
           AlignWithMargins = True
           Left = 10

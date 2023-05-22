@@ -3,10 +3,11 @@ unit ufrmCrubBase;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
   System.Actions, Vcl.ActnList, Vcl.ToolWin, Vcl.ComCtrls, Vcl.Grids,
-  Vcl.DBGrids;
+  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls;
 
 type
   TfrmCrudBase = class(TForm)
@@ -37,6 +38,20 @@ type
     ToolButton5: TToolButton;
     ToolButton6: TToolButton;
     acFechar: TAction;
+    ToolButton7: TToolButton;
+    ToolButton8: TToolButton;
+    ToolButton9: TToolButton;
+    ToolButton10: TToolButton;
+    ToolButton11: TToolButton;
+    ToolButton12: TToolButton;
+    ToolButton13: TToolButton;
+    ToolButton14: TToolButton;
+    gbxPesquisa: TGroupBox;
+    Label2: TLabel;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    lblConteudo: TLabel;
+    btnLocalizar: TButton;
     procedure acInserirExecute(Sender: TObject);
     procedure acAlterarExecute(Sender: TObject);
     procedure acExcluirExecute(Sender: TObject);
@@ -48,6 +63,8 @@ type
     procedure acUltimoExecute(Sender: TObject);
     procedure acAtualizarExecute(Sender: TObject);
     procedure acFecharExecute(Sender: TObject);
+    procedure gbxPesquisaMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
   private
     { Private declarations }
   public
@@ -65,67 +82,75 @@ uses udm;
 
 procedure TfrmCrudBase.acAlterarExecute(Sender: TObject);
 begin
-//Alterar
-dsDados.DataSet.Edit;
+  // Alterar
+  dsDados.DataSet.Edit;
 end;
 
 procedure TfrmCrudBase.acAnteriorExecute(Sender: TObject);
 begin
-//Anterior
-dsDados.DataSet.Prior;
+  // Anterior
+  dsDados.DataSet.Prior;
 end;
 
 procedure TfrmCrudBase.acAtualizarExecute(Sender: TObject);
 begin
-//Atualizar
+  // Atualizar
   dsDados.DataSet.Refresh;
 end;
 
 procedure TfrmCrudBase.acCancelarExecute(Sender: TObject);
 begin
-//Cancelar
-dsDados.DataSet.Cancel;
+  // Cancelar
+  dsDados.DataSet.Cancel;
 end;
 
 procedure TfrmCrudBase.acExcluirExecute(Sender: TObject);
 begin
-//Delete
-dsDados.DataSet.Delete;
+  // Delete
+  if MessageBox(Handle,'Confirma exclusão do registro?','Confirmação',MB_YESNO + MB_ICONQUESTION + MB_DEFBUTTON2) = ID_NO then
+    Abort;
+  dsDados.DataSet.Delete;
 end;
 
 procedure TfrmCrudBase.acFecharExecute(Sender: TObject);
 begin
-dsDados.DataSet.Close;
+  Close;
 end;
 
 procedure TfrmCrudBase.acGravarExecute(Sender: TObject);
 begin
-//Salvar
-dsDados.DataSet.Post;
+  // Salvar
+  dsDados.DataSet.Post;
 end;
 
 procedure TfrmCrudBase.acInserirExecute(Sender: TObject);
 begin
-//Incluir
-dsDados.DataSet.Append;
+  // Incluir
+  dsDados.DataSet.Append;
 end;
 
 procedure TfrmCrudBase.acPrimeiroExecute(Sender: TObject);
 begin
-//Voltar no primeiro
-dsDados.DataSet.First;
+  // Voltar no primeiro
+  dsDados.DataSet.First;
 end;
 
 procedure TfrmCrudBase.acProximoExecute(Sender: TObject);
 begin
-//Proximo
+  // Proximo
   dsDados.DataSet.Next;
 end;
 
 procedure TfrmCrudBase.acUltimoExecute(Sender: TObject);
 begin
-//Ultimo
-dsDados.DataSet.Last;
+  // Ultimo
+  dsDados.DataSet.Last;
+end;
+
+procedure TfrmCrudBase.gbxPesquisaMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: Integer);
+begin
+pnlCabecalho.Visible := true;
 end;
 
 end.
