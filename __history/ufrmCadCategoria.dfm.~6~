@@ -1,0 +1,51 @@
+inherited frmCadCategoria: TfrmCadCategoria
+  ActiveControl = dbgDados
+  Caption = 'Cadastro de Categorias'
+  ClientHeight = 477
+  ClientWidth = 903
+  OnHide = acAlterarExecute
+  ExplicitWidth = 919
+  ExplicitHeight = 516
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlCabecalho: TPanel
+    Width = 903
+    ExplicitWidth = 903
+    inherited Label1: TLabel
+      Width = 881
+    end
+  end
+  inherited pcPadrao: TPageControl
+    Width = 883
+    Height = 416
+    HelpType = htKeyword
+    ExplicitWidth = 883
+    ExplicitHeight = 416
+    inherited tabListagem: TTabSheet
+      ExplicitWidth = 875
+      ExplicitHeight = 388
+      inherited pnlDados: TPanel
+        Width = 875
+        Height = 388
+        ExplicitWidth = 875
+        ExplicitHeight = 388
+        inherited dbgDados: TDBGrid
+          Width = 855
+          Height = 284
+        end
+        inherited gbxPesquisa: TGroupBox
+          Width = 865
+          ExplicitWidth = 865
+        end
+      end
+    end
+    inherited tabDetalhe: TTabSheet
+      ExplicitWidth = 875
+      ExplicitHeight = 388
+      inherited tdDados: TToolBar
+        Width = 875
+        ExplicitWidth = 875
+      end
+    end
+  end
+end

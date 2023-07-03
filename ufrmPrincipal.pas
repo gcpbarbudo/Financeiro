@@ -14,28 +14,22 @@ type
     pnlCabecalho: TPanel;
     pnlDireito: TPanel;
     pnlEsquerdo: TPanel;
-    pnlCentral: TPanel;
+    pnlCard: TPanel;
     pnlCartoes: TPanel;
     pnlCarteira: TPanel;
     pnlMoradia: TPanel;
     pnlCompras: TPanel;
-    pnlRestante: TPanel;
     Label1: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    lblRestante: TLabel;
     gbxPagos: TGroupBox;
     dbgPagos: TDBGrid;
     gbxPendente: TGroupBox;
     dbgPendente: TDBGrid;
-    gbxUltLancamentos: TGroupBox;
-    dbgUltLanc: TDBGrid;
-    Image1: TImage;
     Label2: TLabel;
     lblVCompras: TLabel;
     lblVMoradia: TLabel;
     lblVCarteira: TLabel;
-    Label5: TLabel;
     GroupBox1: TGroupBox;
     DBGrid1: TDBGrid;
     acAcoes: TActionList;
@@ -45,6 +39,12 @@ type
     acGRecorrente: TAction;
     SpeedButton3: TButton;
     acCategoria: TAction;
+    Image1: TImage;
+    pnlRestante: TPanel;
+    lblRestante: TLabel;
+    Label5: TLabel;
+    gbxUltLancamento: TGroupBox;
+    dbgUltLanc: TDBGrid;
     procedure acInserirExecute(Sender: TObject);
     procedure acGRecorrenteExecute(Sender: TObject);
     procedure acCategoriaExecute(Sender: TObject);
@@ -66,20 +66,15 @@ implementation
 
 {$R *.dfm}
 
-uses udm, ufrmRelatorio, ufrmGastoRecorrente, ufrmCategoria, ufrmInserirDado,
+uses udm, ufrmRelatorio, ufrmGastoRecorrente, ufrmCadCategoria, ufrmInserirDado,
   ufrmLogin;
 
 procedure TfrmPrincipal.acCategoriaExecute(Sender: TObject);
 begin
-  // Inserir Categoria
-
-  try
-    frmCategoria := TfrmCategoria.Create(Self);
-    frmCategoria.ShowModal;
-  finally
-    FreeAndNil(frmCategoria);
-  end;
-
+  gbxUltLancamento.Visible := false;
+  if frmCadCategoria = nil then
+    frmCadCategoria := TfrmCadCategoria.Create(Self);
+  frmCadCategoria.Show;
 end;
 
 procedure TfrmPrincipal.acGRecorrenteExecute(Sender: TObject);

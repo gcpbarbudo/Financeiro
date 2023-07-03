@@ -7,24 +7,20 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
   System.Actions, Vcl.ActnList, Vcl.ToolWin, Vcl.ComCtrls, Vcl.Grids,
-  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls;
+  Vcl.DBGrids, Vcl.Mask, Vcl.DBCtrls, Vcl.Buttons;
 
 type
   TfrmCrudBase = class(TForm)
     pnlCabecalho: TPanel;
-    Label1: TLabel;
+    lblTitulo: TLabel;
     pcPadrao: TPageControl;
     tabListagem: TTabSheet;
     tabDetalhe: TTabSheet;
     pnlDados: TPanel;
     dbgDados: TDBGrid;
     dsDados: TDataSource;
-    tdDados: TToolBar;
     acAcoes: TActionList;
     acPrimeiro: TAction;
-    ToolButton1: TToolButton;
-    ToolButton2: TToolButton;
-    ToolButton3: TToolButton;
     acAnterior: TAction;
     acProximo: TAction;
     acUltimo: TAction;
@@ -34,24 +30,28 @@ type
     acGravar: TAction;
     acCancelar: TAction;
     acAtualizar: TAction;
-    ToolButton4: TToolButton;
-    ToolButton5: TToolButton;
-    ToolButton6: TToolButton;
     acFechar: TAction;
-    ToolButton7: TToolButton;
-    ToolButton8: TToolButton;
-    ToolButton9: TToolButton;
-    ToolButton10: TToolButton;
-    ToolButton11: TToolButton;
-    ToolButton12: TToolButton;
-    ToolButton13: TToolButton;
-    ToolButton14: TToolButton;
     gbxPesquisa: TGroupBox;
     Label2: TLabel;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     lblConteudo: TLabel;
     btnLocalizar: TButton;
+    tdDados: TToolBar;
+    ToolButton1: TToolButton;
+    ToolButton10: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    ToolButton11: TToolButton;
+    ToolButton6: TToolButton;
+    ToolButton7: TToolButton;
+    ToolButton8: TToolButton;
+    ToolButton9: TToolButton;
+    ToolButton12: TToolButton;
+    ToolButton13: TToolButton;
+    ToolButton14: TToolButton;
     procedure acInserirExecute(Sender: TObject);
     procedure acAlterarExecute(Sender: TObject);
     procedure acExcluirExecute(Sender: TObject);
@@ -63,8 +63,9 @@ type
     procedure acUltimoExecute(Sender: TObject);
     procedure acAtualizarExecute(Sender: TObject);
     procedure acFecharExecute(Sender: TObject);
-    procedure gbxPesquisaMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Integer);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormShow(Sender: TObject);
+    procedure dsDadosStateChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -147,10 +148,36 @@ begin
   dsDados.DataSet.Last;
 end;
 
-procedure TfrmCrudBase.gbxPesquisaMouseMove(Sender: TObject; Shift: TShiftState;
-  X, Y: Integer);
+procedure TfrmCrudBase.dsDadosStateChange(Sender: TObject);
 begin
-pnlCabecalho.Visible := true;
+  if dsDados.State in [dsInsert,dsEdit] then
+  begin
+    acPrimeiro.Enabled := False;
+    acAnterior.Enabled := False;
+    acProximo.Enabled := False;
+    acUltimo.Enabled := False;
+    acInserir.Enabled := False;
+    acAlterar.Enabled := False;
+    acExcluir.Enabled := False;
+    acFechar.Enabled := False;
+    acGravar.Enabled := True;
+  end
+  else
+  begin
+
+  end;
+end;
+
+procedure TfrmCrudBase.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree
+end;
+
+procedure TfrmCrudBase.FormShow(Sender: TObject);
+begin
+  // se não ligou o dataset, mandar mensagem e travar CRUD;
+  dsDados.DataSet.Open;
+  lblTitulo.Caption := self.Caption
 end;
 
 end.

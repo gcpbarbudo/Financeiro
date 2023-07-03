@@ -258,6 +258,7 @@ object frmLogin: TfrmLogin
       Height = 21
       PasswordChar = #8226
       TabOrder = 1
+      Text = '123'
       OnKeyPress = edtSenhaKeyPress
     end
     object edtUsuario: TEdit
@@ -266,6 +267,7 @@ object frmLogin: TfrmLogin
       Width = 233
       Height = 21
       TabOrder = 0
+      Text = 'barbudo'
       OnKeyPress = edtUsuarioKeyPress
     end
   end

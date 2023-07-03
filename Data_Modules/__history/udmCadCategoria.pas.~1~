@@ -1,0 +1,27 @@
+unit udmCadCategoria;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TdmCadCategoria = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmCadCategoria: TdmCadCategoria;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses udm;
+
+{$R *.dfm}
+
+end.

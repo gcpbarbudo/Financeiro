@@ -1,0 +1,26 @@
+unit ufrmCadCategoria;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, ufrmCrubBase, Data.DB, System.Actions,
+  Vcl.ActnList, Vcl.ComCtrls, Vcl.ToolWin, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+
+type
+  TfrmCrudBase1 = class(TfrmCrudBase)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCrudBase1: TfrmCrudBase1;
+
+implementation
+
+{$R *.dfm}
+
+end.

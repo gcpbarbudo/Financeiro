@@ -7,8 +7,8 @@
     <Transaction>2022/11/18 15:26:01.000.523,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/11/24 13:37:00.000.465,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2023/04/05 08:30:50.000.630,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/04/05 08:52:19.000.070,C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\CaraRico.pas=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2023/04/05 08:52:19.000.070,C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\CaraRico.dfm=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/04/05 08:52:19.000.070,C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\CaraRico.pas=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2023/04/05 08:52:38.000.513,C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\Daskbord.dproj=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2023/04/05 13:54:44.000.314,=C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\Unit1.pas</Transaction>
     <Transaction>2023/04/05 13:55:15.000.944,=C:\Users\guilherme.barbudo\Documents\GitHub\Financeiro\Unit1.pas</Transaction>
@@ -24,11 +24,11 @@
     <Transaction>2023/04/12 20:47:01.000.726,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmLogin.dfm</Transaction>
     <Transaction>2023/04/12 20:47:01.000.726,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmLogin.pas</Transaction>
     <Transaction>2023/04/14 19:18:34.000.489,=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas</Transaction>
-    <Transaction>2023/04/14 19:19:51.000.030,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmGastoRecorrente.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.dfm</Transaction>
     <Transaction>2023/04/14 19:19:51.000.030,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmGastoRecorrente.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas</Transaction>
+    <Transaction>2023/04/14 19:19:51.000.030,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmGastoRecorrente.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.dfm</Transaction>
     <Transaction>2023/04/14 20:02:26.000.610,=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit2.pas</Transaction>
-    <Transaction>2023/04/14 20:19:23.000.557,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCategoria.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit2.dfm</Transaction>
     <Transaction>2023/04/14 20:19:23.000.557,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCategoria.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit2.pas</Transaction>
+    <Transaction>2023/04/14 20:19:23.000.557,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCategoria.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit2.dfm</Transaction>
     <Transaction>2023/04/14 20:22:03.000.293,=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit3.pas</Transaction>
     <Transaction>2023/04/14 20:22:32.000.656,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmInserirDado.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit3.pas</Transaction>
     <Transaction>2023/04/14 20:22:32.000.656,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmInserirDado.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit3.dfm</Transaction>
@@ -37,5 +37,12 @@
     <Transaction>2023/04/16 10:15:48.000.767,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Daskbord.dproj=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\CaraRico.dproj</Transaction>
     <Transaction>2023/04/16 10:17:20.000.716,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\uCrubBase.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCrubBase.dfm</Transaction>
     <Transaction>2023/04/16 10:17:20.000.716,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\uCrubBase.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCrubBase.pas</Transaction>
+    <Transaction>2023/05/26 19:39:40.000.760,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCategoria.pas=</Transaction>
+    <Transaction>2023/05/26 19:42:47.000.709,=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas</Transaction>
+    <Transaction>2023/05/26 19:44:41.000.155,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCadCategoria.dfm</Transaction>
+    <Transaction>2023/05/26 19:44:41.000.155,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\ufrmCadCategoria.pas</Transaction>
+    <Transaction>2023/06/17 15:45:11.876,=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas</Transaction>
+    <Transaction>2023/06/17 15:47:05.980,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Data_Modules\udmCadCategoria.dfm=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.dfm</Transaction>
+    <Transaction>2023/06/17 15:47:05.980,B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Data_Modules\udmCadCategoria.pas=B:\Guilherme Barbudo\OneDrive\Documentos\GitHub\Financeiro\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

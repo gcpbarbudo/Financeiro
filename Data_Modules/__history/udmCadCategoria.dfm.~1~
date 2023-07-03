@@ -1,0 +1,5 @@
+object dmCadCategoria: TdmCadCategoria
+  OldCreateOrder = False
+  Height = 193
+  Width = 272
+end

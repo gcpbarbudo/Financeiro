@@ -127,13 +127,18 @@
             <Form>frmGastoRecorrente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="ufrmCategoria.pas">
-            <Form>frmCategoria</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="ufrmInserirDado.pas">
             <Form>frmInserirDado</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ufrmCadCategoria.pas">
+            <Form>frmCadCategoria</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Data_Modules\udmCadCategoria.pas">
+            <Form>dmCadCategoria</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

@@ -2,7 +2,7 @@ object frmCrudBase: TfrmCrudBase
   Left = 0
   Top = 0
   Caption = 'Formul'#225'rio'
-  ClientHeight = 479
+  ClientHeight = 482
   ClientWidth = 904
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,7 +10,13 @@ object frmCrudBase: TfrmCrudBase
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnDeactivate = acAlterarExecute
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCabecalho: TPanel
@@ -24,17 +30,16 @@ object frmCrudBase: TfrmCrudBase
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitLeft = 152
-    object Label1: TLabel
+    object lblTitulo: TLabel
       AlignWithMargins = True
       Left = 11
-      Top = 11
+      Top = 1
       Width = 882
-      Height = 19
+      Height = 39
       Margins.Left = 10
-      Margins.Top = 10
+      Margins.Top = 0
       Margins.Right = 10
-      Margins.Bottom = 10
+      Margins.Bottom = 0
       Align = alClient
       Caption = 'Formul'#225'rio'
       Color = clWhite
@@ -53,9 +58,9 @@ object frmCrudBase: TfrmCrudBase
   object pcPadrao: TPageControl
     AlignWithMargins = True
     Left = 10
-    Top = 51
+    Top = 110
     Width = 884
-    Height = 418
+    Height = 362
     Margins.Left = 10
     Margins.Top = 10
     Margins.Right = 10
@@ -69,7 +74,7 @@ object frmCrudBase: TfrmCrudBase
         Left = 0
         Top = 0
         Width = 876
-        Height = 390
+        Height = 334
         Align = alClient
         BevelOuter = bvNone
         ShowCaption = False
@@ -77,9 +82,9 @@ object frmCrudBase: TfrmCrudBase
         object dbgDados: TDBGrid
           AlignWithMargins = True
           Left = 10
-          Top = 94
+          Top = 97
           Width = 856
-          Height = 286
+          Height = 227
           Margins.Left = 10
           Margins.Top = 5
           Margins.Right = 10
@@ -95,35 +100,36 @@ object frmCrudBase: TfrmCrudBase
         end
         object gbxPesquisa: TGroupBox
           AlignWithMargins = True
-          Left = 5
-          Top = 5
-          Width = 866
-          Height = 84
-          Margins.Left = 5
-          Margins.Top = 5
-          Margins.Right = 5
-          Margins.Bottom = 0
+          Left = 10
+          Top = 10
+          Width = 856
+          Height = 72
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
           Align = alTop
+          BiDiMode = bdLeftToRight
           Caption = 'Pesquisa'
           Color = clWhite
           ParentBackground = False
+          ParentBiDiMode = False
           ParentColor = False
           TabOrder = 1
           Visible = False
-          OnMouseMove = gbxPesquisaMouseMove
           object Label2: TLabel
             AlignWithMargins = True
             Left = 12
             Top = 25
-            Width = 37
-            Height = 47
+            Width = 33
+            Height = 35
             Margins.Left = 10
             Margins.Top = 10
             Margins.Right = 10
             Margins.Bottom = 10
             Align = alLeft
             Caption = 'Campo'
-            ExplicitHeight = 39
+            ExplicitHeight = 13
           end
           object lblConteudo: TLabel
             Left = 199
@@ -160,108 +166,114 @@ object frmCrudBase: TfrmCrudBase
     object tabDetalhe: TTabSheet
       Caption = '&Detalhe'
       ImageIndex = 1
-      object tdDados: TToolBar
-        Left = 0
-        Top = 0
-        Width = 876
-        Height = 49
-        ButtonHeight = 52
-        ButtonWidth = 49
-        Caption = 'tdDados'
-        Images = dm.imgIcones32
-        ShowCaptions = True
-        TabOrder = 0
-        object ToolButton1: TToolButton
-          Left = 0
-          Top = 0
-          Action = acFechar
-        end
-        object ToolButton10: TToolButton
-          Left = 49
-          Top = 0
-          Width = 8
-          Caption = 'ToolButton10'
-          ImageIndex = 9
-          Style = tbsSeparator
-        end
-        object ToolButton2: TToolButton
-          Left = 57
-          Top = 0
-          Action = acUltimo
-        end
-        object ToolButton3: TToolButton
-          Left = 106
-          Top = 0
-          Action = acAnterior
-        end
-        object ToolButton4: TToolButton
-          Left = 155
-          Top = 0
-          Action = acProximo
-        end
-        object ToolButton5: TToolButton
-          Left = 204
-          Top = 0
-          Action = acPrimeiro
-        end
-        object ToolButton11: TToolButton
-          Left = 253
-          Top = 0
-          Width = 8
-          Caption = 'ToolButton11'
-          ImageIndex = 9
-          Style = tbsSeparator
-        end
-        object ToolButton6: TToolButton
-          Left = 261
-          Top = 0
-          Action = acInserir
-        end
-        object ToolButton7: TToolButton
-          Left = 310
-          Top = 0
-          Action = acAlterar
-        end
-        object ToolButton8: TToolButton
-          Left = 359
-          Top = 0
-          Action = acExcluir
-        end
-        object ToolButton9: TToolButton
-          Left = 408
-          Top = 0
-          Action = acGravar
-        end
-        object ToolButton12: TToolButton
-          Left = 457
-          Top = 0
-          Action = acCancelar
-        end
-        object ToolButton13: TToolButton
-          Left = 506
-          Top = 0
-          Width = 8
-          Caption = 'ToolButton13'
-          ImageIndex = 0
-          Style = tbsSeparator
-        end
-        object ToolButton14: TToolButton
-          Left = 514
-          Top = 0
-          Action = acAtualizar
-        end
-      end
+    end
+  end
+  object tdDados: TToolBar
+    AlignWithMargins = True
+    Left = 10
+    Top = 51
+    Width = 884
+    Height = 49
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 0
+    ButtonHeight = 52
+    ButtonWidth = 49
+    Caption = 'tdDados'
+    Images = dm.imgIcones32
+    ShowCaptions = True
+    TabOrder = 2
+    object ToolButton1: TToolButton
+      Left = 0
+      Top = 0
+      Action = acFechar
+    end
+    object ToolButton10: TToolButton
+      Left = 49
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton10'
+      ImageIndex = 9
+      Style = tbsSeparator
+    end
+    object ToolButton2: TToolButton
+      Left = 57
+      Top = 0
+      Action = acUltimo
+    end
+    object ToolButton3: TToolButton
+      Left = 106
+      Top = 0
+      Action = acAnterior
+    end
+    object ToolButton4: TToolButton
+      Left = 155
+      Top = 0
+      Action = acProximo
+    end
+    object ToolButton5: TToolButton
+      Left = 204
+      Top = 0
+      Action = acPrimeiro
+    end
+    object ToolButton11: TToolButton
+      Left = 253
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton11'
+      ImageIndex = 9
+      Style = tbsSeparator
+    end
+    object ToolButton6: TToolButton
+      Left = 261
+      Top = 0
+      Action = acInserir
+    end
+    object ToolButton7: TToolButton
+      Left = 310
+      Top = 0
+      Action = acAlterar
+    end
+    object ToolButton8: TToolButton
+      Left = 359
+      Top = 0
+      Action = acExcluir
+    end
+    object ToolButton9: TToolButton
+      Left = 408
+      Top = 0
+      Action = acGravar
+    end
+    object ToolButton12: TToolButton
+      Left = 457
+      Top = 0
+      Action = acCancelar
+    end
+    object ToolButton13: TToolButton
+      Left = 506
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton13'
+      ImageIndex = 0
+      Style = tbsSeparator
+    end
+    object ToolButton14: TToolButton
+      Left = 514
+      Top = 0
+      Action = acAtualizar
     end
   end
   object dsDados: TDataSource
     AutoEdit = False
-    Left = 814
-    Top = 3
+    OnStateChange = dsDadosStateChange
+    Left = 819
+    Top = 6
   end
   object acAcoes: TActionList
     Images = dm.imgIcones32
-    Left = 870
-    Top = 3
+    Left = 867
+    Top = 6
     object acPrimeiro: TAction
       Category = 'Navegacao'
       Caption = 'Primeiro'

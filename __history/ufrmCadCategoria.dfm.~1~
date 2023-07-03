@@ -1,0 +1,10 @@
+inherited frmCrudBase1: TfrmCrudBase1
+  ActiveControl = pcPadrao
+  Caption = 'Cadastro de Categorias'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pcPadrao: TPageControl
+    HelpType = htKeyword
+    ActivePage = tabListagem
+  end
+end

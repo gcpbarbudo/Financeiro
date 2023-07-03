@@ -1,0 +1,37 @@
+unit ufrmCadCategoria;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, ufrmCrubBase, Data.DB, System.Actions,
+  Vcl.ActnList, Vcl.ComCtrls, Vcl.ToolWin, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmCadCategoria = class(TfrmCrudBase)
+    Label1: TLabel;
+    DBEdit3: TDBEdit;
+    Label3: TLabel;
+    DBEdit4: TDBEdit;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadCategoria: TfrmCadCategoria;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmCadCategoria.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  frmCadCategoria := nil;
+end;
+
+end.

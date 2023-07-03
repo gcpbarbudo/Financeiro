@@ -10,6 +10,7 @@ object dm: Tdm
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 16

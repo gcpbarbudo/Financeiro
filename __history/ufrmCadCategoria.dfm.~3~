@@ -1,0 +1,25 @@
+inherited frmCrudBase1: TfrmCrudBase1
+  ActiveControl = pcPadrao
+  Caption = 'Cadastro de Categorias'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlCabecalho: TPanel
+    inherited Label1: TLabel
+      Width = 882
+      Height = 19
+    end
+  end
+  inherited pcPadrao: TPageControl
+    HelpType = htKeyword
+    ActivePage = tabListagem
+    inherited tabListagem: TTabSheet
+      inherited pnlDados: TPanel
+        inherited gbxPesquisa: TGroupBox
+          inherited Label2: TLabel
+            Height = 47
+          end
+        end
+      end
+    end
+  end
+end

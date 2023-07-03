@@ -1,0 +1,351 @@
+object frmCrudBase: TfrmCrudBase
+  Left = 0
+  Top = 0
+  Caption = 'Formul'#225'rio'
+  ClientHeight = 482
+  ClientWidth = 904
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnDeactivate = acAlterarExecute
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlCabecalho: TPanel
+    Left = 0
+    Top = 0
+    Width = 904
+    Height = 41
+    Align = alTop
+    BevelEdges = []
+    Color = 14373219
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    object lblTitulo: TLabel
+      AlignWithMargins = True
+      Left = 11
+      Top = 1
+      Width = 882
+      Height = 39
+      Margins.Left = 10
+      Margins.Top = 0
+      Margins.Right = 10
+      Margins.Bottom = 0
+      Align = alClient
+      Caption = 'Formul'#225'rio'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -19
+      Font.Name = 'Calibri'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitTop = 11
+      ExplicitWidth = 87
+      ExplicitHeight = 23
+    end
+  end
+  object pcPadrao: TPageControl
+    AlignWithMargins = True
+    Left = 10
+    Top = 110
+    Width = 884
+    Height = 362
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    ActivePage = tabListagem
+    Align = alClient
+    TabOrder = 1
+    ExplicitTop = 51
+    ExplicitHeight = 421
+    object tabListagem: TTabSheet
+      Caption = '&Listagem'
+      object pnlDados: TPanel
+        Left = 0
+        Top = 0
+        Width = 876
+        Height = 334
+        Align = alClient
+        BevelOuter = bvNone
+        ShowCaption = False
+        TabOrder = 0
+        ExplicitHeight = 393
+        object dbgDados: TDBGrid
+          AlignWithMargins = True
+          Left = 10
+          Top = 97
+          Width = 856
+          Height = 227
+          Margins.Left = 10
+          Margins.Top = 5
+          Margins.Right = 10
+          Margins.Bottom = 10
+          Align = alClient
+          DataSource = dsDados
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+        end
+        object gbxPesquisa: TGroupBox
+          AlignWithMargins = True
+          Left = 10
+          Top = 10
+          Width = 856
+          Height = 72
+          Margins.Left = 10
+          Margins.Top = 10
+          Margins.Right = 10
+          Margins.Bottom = 10
+          Align = alTop
+          BiDiMode = bdLeftToRight
+          Caption = 'Pesquisa'
+          Color = clWhite
+          ParentBackground = False
+          ParentBiDiMode = False
+          ParentColor = False
+          TabOrder = 1
+          Visible = False
+          object Label2: TLabel
+            AlignWithMargins = True
+            Left = 12
+            Top = 25
+            Width = 33
+            Height = 35
+            Margins.Left = 10
+            Margins.Top = 10
+            Margins.Right = 10
+            Margins.Bottom = 10
+            Align = alLeft
+            Caption = 'Campo'
+            ExplicitHeight = 13
+          end
+          object lblConteudo: TLabel
+            Left = 199
+            Top = 25
+            Width = 47
+            Height = 13
+            Caption = 'Conte'#250'do'
+          end
+          object DBEdit1: TDBEdit
+            Left = 12
+            Top = 39
+            Width = 181
+            Height = 21
+            TabOrder = 0
+          end
+          object DBEdit2: TDBEdit
+            Left = 199
+            Top = 39
+            Width = 298
+            Height = 21
+            TabOrder = 1
+          end
+          object btnLocalizar: TButton
+            Left = 503
+            Top = 35
+            Width = 114
+            Height = 25
+            Caption = 'Localizar'
+            TabOrder = 2
+          end
+        end
+      end
+    end
+    object tabDetalhe: TTabSheet
+      Caption = '&Detalhe'
+      ImageIndex = 1
+    end
+  end
+  object tdDados: TToolBar
+    AlignWithMargins = True
+    Left = 10
+    Top = 51
+    Width = 884
+    Height = 49
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 0
+    ButtonHeight = 52
+    ButtonWidth = 49
+    Caption = 'tdDados'
+    Images = dm.imgIcones32
+    ShowCaptions = True
+    TabOrder = 2
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 876
+    object ToolButton1: TToolButton
+      Left = 0
+      Top = 0
+      Action = acFechar
+    end
+    object ToolButton10: TToolButton
+      Left = 49
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton10'
+      ImageIndex = 9
+      Style = tbsSeparator
+    end
+    object ToolButton2: TToolButton
+      Left = 57
+      Top = 0
+      Action = acUltimo
+    end
+    object ToolButton3: TToolButton
+      Left = 106
+      Top = 0
+      Action = acAnterior
+    end
+    object ToolButton4: TToolButton
+      Left = 155
+      Top = 0
+      Action = acProximo
+    end
+    object ToolButton5: TToolButton
+      Left = 204
+      Top = 0
+      Action = acPrimeiro
+    end
+    object ToolButton11: TToolButton
+      Left = 253
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton11'
+      ImageIndex = 9
+      Style = tbsSeparator
+    end
+    object ToolButton6: TToolButton
+      Left = 261
+      Top = 0
+      Action = acInserir
+    end
+    object ToolButton7: TToolButton
+      Left = 310
+      Top = 0
+      Action = acAlterar
+    end
+    object ToolButton8: TToolButton
+      Left = 359
+      Top = 0
+      Action = acExcluir
+    end
+    object ToolButton9: TToolButton
+      Left = 408
+      Top = 0
+      Action = acGravar
+    end
+    object ToolButton12: TToolButton
+      Left = 457
+      Top = 0
+      Action = acCancelar
+    end
+    object ToolButton13: TToolButton
+      Left = 506
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton13'
+      ImageIndex = 0
+      Style = tbsSeparator
+    end
+    object ToolButton14: TToolButton
+      Left = 514
+      Top = 0
+      Action = acAtualizar
+    end
+  end
+  object dsDados: TDataSource
+    AutoEdit = False
+    OnStateChange = dsDadosStateChange
+    Left = 819
+    Top = 6
+  end
+  object acAcoes: TActionList
+    Images = dm.imgIcones32
+    Left = 867
+    Top = 6
+    object acPrimeiro: TAction
+      Category = 'Navegacao'
+      Caption = 'Primeiro'
+      ImageIndex = 6
+      OnExecute = acPrimeiroExecute
+    end
+    object acAnterior: TAction
+      Category = 'Navegacao'
+      Caption = 'Anterior'
+      ImageIndex = 10
+      OnExecute = acAnteriorExecute
+    end
+    object acProximo: TAction
+      Category = 'Navegacao'
+      Caption = 'Pr'#243'ximo'
+      ImageIndex = 1
+      OnExecute = acProximoExecute
+    end
+    object acUltimo: TAction
+      Category = 'Navegacao'
+      Caption = #218'ltimo'
+      ImageIndex = 7
+      OnExecute = acUltimoExecute
+    end
+    object acInserir: TAction
+      Category = 'Dados'
+      Caption = 'Inserir'
+      ImageIndex = 9
+      OnExecute = acInserirExecute
+    end
+    object acAlterar: TAction
+      Category = 'Dados'
+      Caption = 'Alterar'
+      ImageIndex = 5
+      OnExecute = acAlterarExecute
+    end
+    object acExcluir: TAction
+      Category = 'Dados'
+      Caption = 'Excluir'
+      ImageIndex = 3
+      OnExecute = acExcluirExecute
+    end
+    object acGravar: TAction
+      Category = 'Dados'
+      Caption = 'Gravar'
+      ImageIndex = 13
+      OnExecute = acGravarExecute
+    end
+    object acCancelar: TAction
+      Category = 'Dados'
+      Caption = 'Cancelar'
+      ImageIndex = 14
+      OnExecute = acCancelarExecute
+    end
+    object acAtualizar: TAction
+      Category = 'Outros'
+      Caption = 'Atualizar'
+      ImageIndex = 11
+      OnExecute = acAtualizarExecute
+    end
+    object acFechar: TAction
+      Category = 'Outros'
+      Caption = 'Fechar'
+      ImageIndex = 12
+      OnExecute = acFecharExecute
+    end
+  end
+end
